@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.16.0/dist/browser/index.js"></script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"","children":[{"content":"第1章: 小泉政権の政治上の特徴を俯瞰","children":[{"content":"「パトスの首相」「強い首相」の観点で","children":[{"content":"自民党の伝統的構造や政策決定メカニズムの変化を分析","children":[],"payload":{"lines":"3,4"}},{"content":"政治運営の特徴を浮き彫りに","children":[],"payload":{"lines":"4,5"}}],"payload":{"lines":"2,5"}},{"content":"「強さ」の源泉　〜個人の力かシステム（90年代改革）か〜","children":[],"payload":{"lines":"5,7"}}],"payload":{"lines":"1,2"}},{"content":"第5章: 小泉政権が日本政治に残した刻印と功罪を明らかに","children":[{"content":"「強い首相」「パトスの首相」の功と罪","children":[],"payload":{"lines":"8,9"}},{"content":"今後の日本政治の方向性","children":[],"payload":{"lines":"9,10"}}],"payload":{"lines":"7,8"}}]},{"maxWidth":300})</script>
+</body>
+</html>
