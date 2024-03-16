@@ -23,7 +23,11 @@ jobs:
       - run: |
           npm install -g markmap-cli@latest
           npm install node-html-to-image@3.3.0
-
+      - name: Install Japanese Fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-cjk
+          
       - name: Convert Markdown To HTML And PNG
         run: |
           rm -f public/*.html public/*.png
