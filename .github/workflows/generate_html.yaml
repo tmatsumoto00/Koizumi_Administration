@@ -39,7 +39,6 @@ jobs:
             node libs/html_to_image.js public/$filename.html
           done
           # 次のステップでhtml, pngのみをコミットさせたいため不要なファイルを削除
-          rm package-lock.json
           rm -rf node_modules/ package.json
           # if [ -f package.json ]; then
           #   git checkout package.json
