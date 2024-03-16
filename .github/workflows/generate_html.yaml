@@ -1,0 +1,55 @@
+name: Generate HTML And PNG
+
+# on:
+#   push:
+#     branches:
+#       - master
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Generate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: npm
+      - run: |
+          npm install -g markmap-cli@latest
+          npm install node-html-to-image@3.3.0
+
+      - name: Convert Markdown To HTML And PNG
+        run: |
+          rm -f public/*.html public/*.png
+          find data -name "*.md" | while read line; do
+            filename=$(basename $line | sed "s/.md//g")
+            # html作成
+            markmap --no-toolbar --no-open $line -o public/$filename.html
+            # png作成
+            node libs/html_to_image.js public/$filename.html
+          done
+          # 次のステップでhtml, pngのみをコミットさせたいため不要なファイルを削除
+          rm package-lock.json
+          rm -rf node_modules/ package.json
+          # if [ -f package.json ]; then
+          #   git checkout package.json
+          # fi
+          # if [ -f yarn.lock ]; then
+          #   git checkout yarn.lock
+          # fi
+      - name: Commit and push
+        run: |
+          git status
+          if [ -n "$(git status --porcelain 2>/dev/null)" ]; then
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git add -A
+            git commit -m "generate html"
+            git push origin main
+          fi
