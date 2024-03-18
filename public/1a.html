@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.16.0/dist/browser/index.js"></script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"「パトスの首相」「強い首相」の観点で","children":[{"content":"自民党の伝統的構造や政策決定メカニズムの変化を分析","children":[{"content":"派閥","children":[],"payload":{"lines":"3,4"}},{"content":"政策決定システム","children":[],"payload":{"lines":"4,5"}},{"content":"経済政策","children":[],"payload":{"lines":"5,6"}}],"payload":{"lines":"2,6"}}],"payload":{"lines":"1,2"}},{"maxWidth":310})</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.16.0/dist/browser/index.js"></script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"「パトスの首相」「強い首相」の観点で","children":[{"content":"政治運営の特徴を浮き彫りに","children":[{"content":"トップダウン的政策決定を行う「強い首相」","children":[],"payload":{"lines":"3,4"}},{"content":"ポピュリスト的手法：「パトスの首相」","children":[{"content":"メディア戦略","children":[],"payload":{"lines":"5,6"}},{"content":"善悪二元の構図","children":[],"payload":{"lines":"6,7"}},{"content":"言語様式","children":[],"payload":{"lines":"7,8"}}],"payload":{"lines":"4,8"}},{"content":"行動様式","children":[{"content":"自民党への強硬な敵対的態度","children":[],"payload":{"lines":"9,10"}},{"content":"ブレない姿勢","children":[],"payload":{"lines":"10,11"}}],"payload":{"lines":"8,11"}}],"payload":{"lines":"2,11"}}],"payload":{"lines":"1,2"}},{"maxWidth":320})</script>
+</body>
+</html>
