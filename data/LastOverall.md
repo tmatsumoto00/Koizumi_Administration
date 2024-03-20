@@ -1,6 +1,6 @@
 ---
 markmap:
-  maxWidth: 300
+  maxWidth: 320
 ---
 
 # 第1章: 小泉政権の政治上の特徴を俯瞰
