@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.16.0/dist/browser/index.js"></script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"「強い首相」「パトスの首相」の功と罪","children":[{"content":"強い首相の","children":[{"content":"功","children":[],"payload":{"lines":"3,4"}},{"content":"罪","children":[],"payload":{"lines":"4,5"}}],"payload":{"lines":"2,5"}},{"content":"パトスの首相の","children":[{"content":"功","children":[],"payload":{"lines":"6,7"}},{"content":"罪","children":[{"content":"対中・対韓関係の悪化","children":[],"payload":{"lines":"8,9"}},{"content":"人びとを思考停止に追い込む","children":[],"payload":{"lines":"9,10"}},{"content":"政治の本質（調整・統合）に反する","children":[],"payload":{"lines":"10,11"}},{"content":"包摂ではなく排除","children":[],"payload":{"lines":"11,12"}},{"content":"前近代性、心情倫理への傾倒","children":[],"payload":{"lines":"12,13"}}],"payload":{"lines":"7,13"}}],"payload":{"lines":"5,13"}}],"payload":{"lines":"1,2"}},{"maxWidth":300})</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.16.0/dist/browser/index.js"></script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"今後の日本政治の方向性","children":[{"content":"日本政治の基礎構造","children":[{"content":"派閥","children":[],"payload":{"lines":"3,4"}},{"content":"首相のリーダーシップ","children":[{"content":"制度的構造","children":[],"payload":{"lines":"5,6"}},{"content":"パーソナリティ","children":[],"payload":{"lines":"6,7"}},{"content":"無党派層","children":[],"payload":{"lines":"7,8"}}],"payload":{"lines":"4,8"}}],"payload":{"lines":"2,8"}},{"content":"今後の政策対立軸","children":[{"content":"経済","children":[],"payload":{"lines":"9,10"}},{"content":"外交","children":[],"payload":{"lines":"10,11"}}],"payload":{"lines":"8,11"}},{"content":"政策決定のあり方","children":[],"payload":{"lines":"11,12"}}],"payload":{"lines":"1,2"}},{"maxWidth":300})</script>
+</body>
+</html>
